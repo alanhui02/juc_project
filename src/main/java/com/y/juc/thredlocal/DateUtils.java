@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Author yao
@@ -109,7 +111,9 @@ public class DateUtils {
 		System.out.println(" =========== ");
 		System.out.println(format(LocalDateTime.now()));
 		System.out.println(format(parseDateDTF("2020-12-23 12:42:12")));
-
+		Lock look = new ReentrantLock();
+		look.lock();
+		look.unlock();
 	}
 
 }
